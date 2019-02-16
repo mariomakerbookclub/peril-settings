@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/danger/peril/master/peril-settings-json.schema",
+  "rules": {
+    "issue_comment.created": "org/new-issue-comment.ts"
+  },
+  "scheduler": {
+    "tuesday-morning-est": "choose-someone-for-mario-maker"
+  },
+  "tasks": {
+    "choose-someone-for-mario-maker": "choose-someone-for-mario-maker.ts"
+  }
+}
