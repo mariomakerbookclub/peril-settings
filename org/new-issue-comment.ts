@@ -2,7 +2,6 @@ import { danger } from "danger"
 import { Issues } from "github-webhook-event-types"
 
 export default async (webhook: Issues) => {
-  console.log("Looking at an issue")
   const issue = webhook.issue
   const api = danger.github.api
 

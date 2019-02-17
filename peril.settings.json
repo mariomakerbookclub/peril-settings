@@ -7,6 +7,6 @@
     "tuesday-morning-est": "choose-someone-for-mario-maker"
   },
   "tasks": {
-    "choose-someone-for-mario-maker": "choose-someone-for-mario-maker.ts"
+    "choose-someone-for-mario-maker": "tasks/choose-someone-for-mario-maker.ts"
   }
 }
