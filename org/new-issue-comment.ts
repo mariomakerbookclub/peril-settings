@@ -1,13 +1,13 @@
 import { danger } from "danger"
-import { Issues } from "github-webhook-event-types"
+import { IssueComment } from "github-webhook-event-types"
 
-export default async (webhook: Issues) => {
+export default async (webhook: IssueComment) => {
   const issue = webhook.issue
   const api = danger.github.api
 
   const org = webhook.repository.owner.login
   const repo = webhook.repository
-  const username = webhook.issue.user.login
+  const username = webhook.comment.user.login
 
   if (repo.name !== "club") {
     return console.log("Not on the club repo, skipping")
