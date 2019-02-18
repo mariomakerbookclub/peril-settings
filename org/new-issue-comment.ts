@@ -13,7 +13,7 @@ export default async (webhook: IssueComment) => {
     return console.log("Not on the club repo, skipping")
   }
 
-  if (webhook.sender.type === "bot") {
+  if (webhook.comment.user.type === "bot") {
     return console.log("No robots in this club")
   }
 
