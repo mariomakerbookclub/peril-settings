@@ -21,8 +21,9 @@ export default async (webhook: Issues) => {
   const isJoinOrgIssue = issue.number === 1
   if (isJoinOrgIssue) {
     try {
-      await api.orgs.checkMembership({ org, username })
-      return console.log("Already a member")
+      const result = await api.orgs.checkMembership({ org, username })
+      console.log(result)
+      return console.log(`${username} is already a member of ${org}`)
     } catch (error) {
       await api.orgs.addOrUpdateMembership({ org, username, role: "member" })
 
